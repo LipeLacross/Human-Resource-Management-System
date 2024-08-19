@@ -1,4 +1,4 @@
-# Sistema de Gerenciamento de Recursos Humanos(Em Construção)
+# Sistema de Gerenciamento de Recursos Humanos
 
 O Sistema de Gerenciamento de Recursos Humanos (HR Management System) é uma aplicação web desenvolvida para gerenciar informações sobre funcionários, folhas de pagamento, benefícios e avaliações de desempenho. O sistema permite a administração eficiente de dados de recursos humanos, ajudando na organização e análise das informações dos colaboradores.
 
