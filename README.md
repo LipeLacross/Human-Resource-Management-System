@@ -1,93 +1,105 @@
 ## 🌐 [English Version of README](README_EN.md)
 
-# Sistema de Gerenciamento de Recursos Humanos
+# Human Resource Management System
 
-O Sistema de Gerenciamento de Recursos Humanos (HR Management System) é uma aplicação web desenvolvida para gerenciar informações sobre funcionários, folhas de pagamento, benefícios e avaliações de desempenho. O sistema permite a administração eficiente de dados de recursos humanos, ajudando na organização e análise das informações dos colaboradores.
+O **Human Resource Management System** é um projeto desenvolvido para gerenciar e automatizar processos de recursos humanos, como a gestão de funcionários, folhas de pagamento, benefícios e avaliações de desempenho. O sistema tem como objetivo fornecer uma solução eficiente e prática para empresas que buscam otimizar suas operações de RH.
 
 ## 🔨 Funcionalidades do Projeto
 
-- **Cadastro de Funcionários**: Adicione e gerencie informações sobre os funcionários da empresa, incluindo nome, e-mail, telefone, data de contratação, cargo e salário.
-- **Folha de Pagamento**: Registre e visualize informações sobre os pagamentos dos funcionários, incluindo data do pagamento, salários brutos e líquidos, e deduções.
-- **Benefícios**: Administre os benefícios oferecidos aos funcionários, como planos de saúde e bônus.
-- **Avaliações de Desempenho**: Realize e registre avaliações de desempenho dos funcionários com notas e comentários.
+- **Gerenciamento de Funcionários**: Cadastro, edição e exclusão de funcionários.
+- **Folhas de Pagamento**: Controle de salários e geração de folhas de pagamento.
+- **Benefícios**: Administração de benefícios oferecidos aos funcionários.
+- **Avaliações de Desempenho**: Registro e acompanhamento de avaliações de desempenho dos funcionários.
 
 ### Exemplo Visual do Projeto
-***
+
+![image](https://github.com/user-attachments/assets/dbf3ef75-aa1c-4734-8e15-5f4d024077be)
+![image](https://github.com/user-attachments/assets/3d9f0dd0-a493-4a17-9272-d922dd3e8e47)
+![image](https://github.com/user-attachments/assets/6bae1612-f60b-4cb8-b667-9c442de56e51)
 
 ## ✔️ Técnicas e Tecnologias Utilizadas
 
-- **Python**: Linguagem de programação usada para desenvolver a aplicação.
-- **Django**: Framework web para desenvolvimento rápido e limpo da aplicação.
-- **Microsoft SQL Server**: Sistema de gerenciamento de banco de dados usado para armazenar os dados da aplicação.
-- **django-mssql-backend**: Pacote para integrar Django com o Microsoft SQL Server.
-- **pyodbc**: Biblioteca para conectar o Django ao SQL Server.
+- **Django**: Framework para o desenvolvimento rápido e seguro de aplicações web.
+- **SQLite**: Banco de dados relacional leve utilizado para armazenar dados.
+- **DRF (Django Rest Framework)**: Framework para construir APIs RESTful.
+- **drf_yasg**: Biblioteca para geração de documentação Swagger/OpenAPI para APIs Django.
 
 ## 📁 Estrutura do Projeto
 
+- **db.sqlite3**: Banco de dados SQLite.
+- **employees/**: Aplicativo responsável pelo gerenciamento de funcionários.
+    - `admin.py`: Configurações do painel administrativo.
+    - `apps.py`: Configurações da aplicação.
+    - **migrations/**: Arquivos de migração do banco de dados.
+        - `0001_initial.py`: Arquivo de migração inicial.
+    - `models.py`: Definição dos modelos de dados.
+    - `serializers.py`: Serializadores para a API.
+    - **templates/**: Templates HTML.
+        - `employee_list.html`: Template para exibir a lista de funcionários.
+    - `tests.py`: Testes automatizados.
+    - `urls.py`: URLs da aplicação.
+    - `views.py`: Lógica de visualização.
+    - `__init__.py`: Inicialização do módulo.
+- **Human-Resource-Management-System/**: Diretório principal do projeto.
+    - `asgi.py`: Configurações ASGI para o projeto.
+    - `settings.py`: Configurações do Django.
+    - `urls.py`: URLs do projeto.
+    - `wsgi.py`: Configurações WSGI para o projeto.
+    - `__init__.py`: Inicialização do módulo.
+- **LICENSE**: Arquivo de licença.
+- **manage.py**: Utilitário de linha de comando do Django.
+- **README.md**: Documento de instruções do projeto.
+- **README_EN.md**: Documento de instruções em inglês.
+- **requirements.txt**: Lista de dependências do projeto.
 
-- **`.gitignore`**: Arquivo para listar arquivos e diretórios a serem ignorados pelo Git, como arquivos de configuração local e diretórios de cache.
-- **`LICENSE`**: Arquivo que contém a licença sob a qual o projeto é distribuído.
-- **`manage.py`**: Script de gerenciamento do Django que permite executar comandos administrativos.
-- **`README.md`**: Arquivo de documentação do projeto que fornece uma visão geral e instruções de uso.
-- **`requirements.txt`**: Arquivo que lista as dependências do projeto para instalação com `pip`.
-- **`Human-Resource-Management-System/`**: Diretório principal do projeto Django, contendo arquivos de configuração e inicialização do projeto:
-   - **`__init__.py`**: Inicializador do pacote para tornar o diretório um módulo Python.
-   - **`asgi.py`**: Interface ASGI para servidores assíncronos.
-   - **`settings.py`**: Configurações do projeto, como banco de dados e aplicativos instalados.
-   - **`urls.py`**: Arquivo de roteamento de URLs do projeto.
-   - **`wsgi.py`**: Interface WSGI para servidores de aplicação.
-- **`employees/`**: Aplicação Django para gerenciamento de funcionários:
-   - **`__init__.py`**: Inicializador do pacote para tornar o diretório um módulo Python.
-   - **`admin.py`**: Configurações para a administração do Django.
-   - **`apps.py`**: Configurações específicas da aplicação.
-   - **`models.py`**: Definição dos modelos de dados para a aplicação.
-   - **`tests.py`**: Testes automatizados para a aplicação.
-   - **`views.py`**: Lógica de visualização e manipulação das requisições.
-   - **`migrations/`**: Diretório para arquivos de migração que refletem mudanças nos modelos de dados.
-   - **`templates/`**: Diretório para templates HTML específicos da aplicação, contendo:
-      - **`employee_list.html`**: Template para listar funcionários.
+## 🛠️ Abrir e rodar o projeto
 
+Para iniciar o projeto localmente, siga os passos abaixo:
 
-## 🛠️ Abrir e Rodar o Projeto
+1. **Certifique-se de que o Python está instalado**:
+    - O [Python](https://www.python.org/) é necessário para rodar o projeto. Você pode verificar se já o tem instalado com:
 
-1. **Clone o repositório**:
+      ```bash
+      python --version
+      ```
 
-    ```bash
-    git clone https://github.com/seu-usuario/Human-Resource-Management-System.git
-    cd Human-Resource-Management-System
-    ```
+    - Se não estiver instalado, baixe e instale a versão recomendada.
 
-2. **Instale as dependências**:
+2. **Clone o Repositório**:
+    - Copie a URL do repositório e execute o comando abaixo no terminal:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+      ```bash
+      git clone <URL_DO_REPOSITORIO>
+      ```
 
-3. **Configure o banco de dados**:
-    - Edite `settings.py` para incluir suas credenciais do SQL Server.
+3. **Instale as Dependências**:
+    - Navegue até o diretório do projeto e instale as dependências utilizando o pip:
 
-4. **Execute as migrações**:
+      ```bash
+      cd Human-Resource-Management-System
+      pip install -r requirements.txt
+      ```
 
-    ```bash
-    python manage.py makemigrations
-    python manage.py migrate
-    ```
+4. **Configure o Banco de Dados**:
+    - Execute as migrações para configurar o banco de dados:
 
-5. **Inicie o servidor de desenvolvimento**:
+      ```bash
+      python manage.py migrate
+      ```
 
-    ```bash
-    python manage.py runserver
-    ```
+5. **Inicie o Servidor de Desenvolvimento**:
+    - Execute o servidor de desenvolvimento do Django:
 
-6. **Acesse o aplicativo**:
-    - Navegue para `http://127.0.0.1:8000/admin` para acessar o painel administrativo.
+      ```bash
+      python manage.py runserver
+      ```
+
+    - Acesse a aplicação em `http://127.0.0.1:8000/` no seu navegador.
 
 ## 🌐 Deploy
 
-Para realizar o deploy do projeto em um ambiente de produção:
+Para informações sobre o deploy da aplicação em ambientes de produção, consulte a documentação específica do Django para [Deploying Django](https://docs.djangoproject.com/en/stable/howto/deployment/).
 
-1. **Configure o ambiente de produção** com o servidor web de sua escolha, como Nginx ou Apache, e um servidor WSGI como Gunicorn.
-2. **Configure a base de dados de produção** e certifique-se de que as credenciais estejam corretas.
-3. **Configurações adicionais** podem incluir a configuração de segurança, backups e certificados SSL.
+## 📜 Documentação da API
 
-Para mais detalhes sobre o deploy, consulte a [documentação oficial do Django](https://docs.djangoproject.com/en/stable/howto/deployment/).
+A documentação da API está disponível no Swagger Hub: [Human Resource Management System API Documentation](https://app.swaggerhub.com/apis-docs/FelipeM./Human-Resource-Management-System/1.0.0)

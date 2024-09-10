@@ -1,89 +1,105 @@
-# Human Resources Management System
+## 🌐 [Versão em Português do README](README.md)
 
-The Human Resources Management System (HR Management System) is a web application designed to manage employee information, payroll, benefits, and performance evaluations. The system enables efficient administration of HR data, assisting in the organization and analysis of employee information.
+# Human Resource Management System
+
+The **Human Resource Management System** is a project designed to manage and automate human resources processes such as employee management, payroll, benefits, and performance reviews. The system aims to provide an efficient and practical solution for companies seeking to optimize their HR operations.
 
 ## 🔨 Project Features
 
-- **Employee Registration**: Add and manage information about company employees, including name, email, phone, hire date, position, and salary.
-- **Payroll**: Record and view information about employee payments, including payment date, gross and net salaries, and deductions.
-- **Benefits**: Manage employee benefits such as health plans and bonuses.
-- **Performance Evaluations**: Conduct and record employee performance evaluations with ratings and comments.
+- **Employee Management**: Create, edit, and delete employee records.
+- **Payroll**: Track salaries and generate payroll reports.
+- **Benefits**: Manage benefits offered to employees.
+- **Performance Reviews**: Record and track employee performance reviews.
 
 ### Visual Example of the Project
-***
+
+![image](https://github.com/user-attachments/assets/dbf3ef75-aa1c-4734-8e15-5f4d024077be)
+![image](https://github.com/user-attachments/assets/3d9f0dd0-a493-4a17-9272-d922dd3e8e47)
+![image](https://github.com/user-attachments/assets/6bae1612-f60b-4cb8-b667-9c442de56e51)
 
 ## ✔️ Techniques and Technologies Used
 
-- **Python**: Programming language used to develop the application.
-- **Django**: Web framework for rapid and clean application development.
-- **Microsoft SQL Server**: Database management system used to store application data.
-- **django-mssql-backend**: Package for integrating Django with Microsoft SQL Server.
-- **pyodbc**: Library for connecting Django to SQL Server.
+- **Django**: A framework for the rapid and secure development of web applications.
+- **SQLite**: A lightweight relational database used for data storage.
+- **DRF (Django Rest Framework)**: A framework for building RESTful APIs.
+- **drf_yasg**: A library for generating Swagger/OpenAPI documentation for Django APIs.
 
 ## 📁 Project Structure
 
-- **`.gitignore`**: File listing files and directories to be ignored by Git, such as local configuration files and cache directories.
-- **`LICENSE`**: File containing the license under which the project is distributed.
-- **`manage.py`**: Django management script that allows executing administrative commands.
-- **`README.md`**: Project documentation file providing an overview and usage instructions.
-- **`requirements.txt`**: File listing project dependencies for installation with `pip`.
-- **`Human-Resource-Management-System/`**: Main directory of the Django project, containing configuration and initialization files:
-   - **`__init__.py`**: Package initializer to make the directory a Python module.
-   - **`asgi.py`**: ASGI interface for asynchronous servers.
-   - **`settings.py`**: Project settings, such as database and installed apps.
-   - **`urls.py`**: Project URL routing file.
-   - **`wsgi.py`**: WSGI interface for application servers.
-- **`employees/`**: Django application for employee management:
-   - **`__init__.py`**: Package initializer to make the directory a Python module.
-   - **`admin.py`**: Django admin configurations.
-   - **`apps.py`**: Application-specific configurations.
-   - **`models.py`**: Data model definitions for the application.
-   - **`tests.py`**: Automated tests for the application.
-   - **`views.py`**: View logic and request handling.
-   - **`migrations/`**: Directory for migration files reflecting changes in data models.
-   - **`templates/`**: Directory for application-specific HTML templates, containing:
-      - **`employee_list.html`**: Template for listing employees.
+- **db.sqlite3**: SQLite database file.
+- **employees/**: Application responsible for employee management.
+    - `admin.py`: Administrative panel configurations.
+    - `apps.py`: Application configurations.
+    - **migrations/**: Database migration files.
+        - `0001_initial.py`: Initial migration file.
+    - `models.py`: Data models definition.
+    - `serializers.py`: Serializers for the API.
+    - **templates/**: HTML templates.
+        - `employee_list.html`: Template for displaying the employee list.
+    - `tests.py`: Automated tests.
+    - `urls.py`: Application URLs.
+    - `views.py`: View logic.
+    - `__init__.py`: Module initialization.
+- **Human-Resource-Management-System/**: Main project directory.
+    - `asgi.py`: ASGI configuration for the project.
+    - `settings.py`: Django settings.
+    - `urls.py`: Project URLs.
+    - `wsgi.py`: WSGI configuration for the project.
+    - `__init__.py`: Module initialization.
+- **LICENSE**: License file.
+- **manage.py**: Django command-line utility.
+- **README.md**: Project instructions document.
+- **README_EN.md**: English instructions document.
+- **requirements.txt**: Project dependencies list.
 
 ## 🛠️ Running the Project
 
-1. **Clone the repository**:
+To run the project locally, follow the steps below:
 
-    ```bash
-    git clone https://github.com/your-username/Human-Resource-Management-System.git
-    cd Human-Resource-Management-System
-    ```
+1. **Ensure Python is Installed**:
+    - Python is required to run the project. You can check if it is already installed with:
 
-2. **Install dependencies**:
+      ```bash
+      python --version
+      ```
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+    - If it is not installed, download and install the recommended version.
 
-3. **Configure the database**:
-    - Edit `settings.py` to include your SQL Server credentials.
+2. **Clone the Repository**:
+    - Copy the repository URL and run the command below in the terminal:
 
-4. **Run migrations**:
+      ```bash
+      git clone <REPOSITORY_URL>
+      ```
 
-    ```bash
-    python manage.py makemigrations
-    python manage.py migrate
-    ```
+3. **Install Dependencies**:
+    - Navigate to the project directory and install the dependencies using pip:
 
-5. **Start the development server**:
+      ```bash
+      cd Human-Resource-Management-System
+      pip install -r requirements.txt
+      ```
 
-    ```bash
-    python manage.py runserver
-    ```
+4. **Set Up the Database**:
+    - Run the migrations to set up the database:
 
-6. **Access the application**:
-    - Navigate to `http://127.0.0.1:8000/admin` to access the admin panel.
+      ```bash
+      python manage.py migrate
+      ```
+
+5. **Start the Development Server**:
+    - Run the Django development server:
+
+      ```bash
+      python manage.py runserver
+      ```
+
+    - Access the application at `http://127.0.0.1:8000/` in your browser.
 
 ## 🌐 Deploy
 
-To deploy the project in a production environment:
+For information on deploying the application in production environments, refer to the Django documentation for [Deploying Django](https://docs.djangoproject.com/en/stable/howto/deployment/).
 
-1. **Set up the production environment** with your chosen web server, such as Nginx or Apache, and a WSGI server like Gunicorn.
-2. **Configure the production database** and ensure credentials are correct.
-3. **Additional configurations** may include setting up security, backups, and SSL certificates.
+## 📜 API Documentation
 
-For more details on deployment, refer to the [official Django documentation](https://docs.djangoproject.com/en/stable/howto/deployment/).
+The API documentation is available on Swagger Hub: [Human Resource Management System API Documentation](https://app.swaggerhub.com/apis-docs/FelipeM./Human-Resource-Management-System/1.0.0)
