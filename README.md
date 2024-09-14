@@ -100,6 +100,8 @@ Para iniciar o projeto localmente, siga os passos abaixo:
 
 Para informações sobre o deploy da aplicação em ambientes de produção, consulte a documentação específica do Django para [Deploying Django](https://docs.djangoproject.com/en/stable/howto/deployment/).
 
+https://human-resource-management-system-l96i.onrender.com
+
 ## 📜 Documentação da API
 
 A documentação da API está disponível no Swagger Hub: [Human Resource Management System API Documentation](https://app.swaggerhub.com/apis-docs/FelipeM./Human-Resource-Management-System/1.0.0)
